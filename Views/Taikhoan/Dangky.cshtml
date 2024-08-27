@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+<div class="container" id="khochua" style="margin-top:30px;">
+    <!--Form 2-->
+
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <div action="/action_page.php" style="text-align:center;margin: 5% 30% 5% 30%">
+            <h2>Đăng ký</h2>
+            <div class="form-group">
+                <label class="textL" for="text">Tên tài khoản <span class="do">*</span></label>
+                <input type="text" class="form-control khungForm" id="TenDN" name="TenDN">
+                <div style="color:red">@ViewData["loi1"]</div>
+            </div>
+            <div class="form-group">
+                <label class="textL" for="email">Địa chỉ Email <span class="do">*</span></label>
+                <input type="email" class="form-control khungForm" id="email" name="Email">
+                <div style="color:red">@ViewData["loi3"]</div>
+            </div>
+            <div class="form-group">
+                <label class="textL" for="pwd">Mật khẩu <span class="do">*</span></label>
+                <input type="password" class="form-control khungForm" id="pwd" name="Matkhau">
+                <div style="color:red">@ViewData["loi2"]</div>
+            </div>
+            <div class="form-group">
+                <label class="textL" for="text">Địa chỉ khách hàng <span class="do">*</span></label>
+                <input type="text" class="form-control khungForm" id="DiaChi" name="DiaChi">
+                <div style="color:red">@ViewData["loi4"]</div>
+            </div>
+            <div class="form-group">
+                <label class="textL" for="text">Số điện thoại khách hàng <span class="do">*</span></label>
+                <input type="text" class="form-control khungForm" id="SoDT" name="SoDT">
+                <div style="color:red">@ViewData["loi5"]</div>
+            </div>
+            <div class="text1">
+                <p>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="Chính sách riêng tư.html">chính sách riêng tư.</a></p>
+            </div>
+            <input type="submit" class="buttom" name="Đăng ký" value="Đăng ký" />
+            <p style="margin-top:2%">Đã có Tài Khoản ?</p>
+            <input type="button" class="buttom" name="Đăng nhập" value="Đăng nhập" onclick="location.href='@Url.Action("Dangnhap", "Taikhoan")'" />
+        </div>
+    }
+</div>

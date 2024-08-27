@@ -1,0 +1,91 @@
+﻿@using Doan.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<Doan.Models.SanPham>
+@helper Truncate(string input, int length)
+{
+    if (input.Length < length)
+    {
+        @input
+
+    }
+    else
+    {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
+@{
+    ViewBag.Title = "Quản lý sản phẩm";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="text-align:center">Quản lý thông tin sản phẩm</h2>
+
+<p class="themsach">
+    @Html.ActionLink("THÊM MỚI", "ThemmoiSP")
+</p>
+@*@using (Html.BeginForm("SanPham", "Admin", FormMethod.Get, new { @class = "form-inline" }))
+    {
+        <div class="form-group">
+            <label>Tên sản phẩm: </label>
+            <input type="Text" class="form-control mx-sm-3" value="@ViewBag.Keyword" name="searchString" placeholder="Nhập tên sản phẩm cần tìm">
+            <input type="button" class="btn btn-default buttom" value="Tìm sản phẩm">
+        </div><hr />
+    }*@
+<table class="table">
+    <tr>
+        <th>
+            Tên sản phẩm
+        </th>
+        <th>
+            Giá bán
+        </th>
+        <th>
+            Mô tả
+        </th>
+        <th>
+            Ảnh
+        </th>
+        <th>
+            Tên loại sản phẩm
+        </th>
+        <th>
+            Tên từ khóa
+        </th>
+        <th>
+            Chỉnh sửa
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="width:12%">
+                @Html.DisplayFor(modelItem => item.TenSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaBan)
+            </td>
+            <td>
+                @Truncate(item.MoTa, 100)
+            </td>
+            <td>
+                <img src="@Url.Content("~/images/"+ item.Anh)" style="width:100px;height:100px" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoaiSp.TenLSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TuKhoa.TenTuKhoa)
+            </td>
+            <td class="admin">
+                @Html.ActionLink("Sửa", "SuaSanPham", new { id = item.MaSP }) |
+                @Html.ActionLink("Xóa", "XoaSanPham", new { id = item.MaSP })
+            </td>
+        </tr>
+    }
+
+</table>
+<div style="margin-left:5%">
+    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("SanPham", new { page = page, @class = "phantrang" }))
+</div>

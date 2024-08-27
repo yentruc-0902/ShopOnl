@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<h4 style="color:red; text-align:center; ">@ViewBag.Thongbao</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true);
+    <div action="/action_page.php" style="text-align:center;margin: 5% 35% 5% 35%">
+        <h2>Đăng nhập</h2>
+        <div class="form-group">
+            <label class="textL" for="email text">Tên tài khoản: <span class="do">*</span></label>
+            <input type="text" class="form-control khungForm" id="TenDN" name="TenDN">
+            <div style="color:red">@ViewData["loi1"]</div>
+        </div>
+        <div class="form-group">
+            <label class="textL" for="pwd">Mật khẩu <span class="do">*</span></label>
+            <input type="password" class="form-control khungForm" id="Matkhau" name="Matkhau">
+            <div style="color:red"> @ViewData["loi2"]</div>
+        </div>
+        <input type="submit" class="buttom" name="Đăng nhập" value="Đăng nhập" />
+        <p style="margin-top:2%">Chưa có Tài Khoản ?</p>
+        <input type="button" class="buttom" name="Đăng ký" value="Đăng ký" onclick="location.href='@Url.Action("Dangky", "Taikhoan")'" />
+        @*<p style="margin-top:2%">Đến giỏ hàng ?</p>
+            <input type="button" class="buttom" name="Đến giỏ hàng" value="Đến giỏ hàng" onclick="location.href='@Url.Action("Giohang", "GioHang")'" />*@
+    </div>
+
+}

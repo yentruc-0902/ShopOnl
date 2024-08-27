@@ -1,0 +1,205 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+}
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Danh sách đơn hàng mới</h1>
+            </div>
+            <div class="col-sm-6" style="text-align:right">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href='@Url.Action("Index","Thongtinchung")'>Home</a></li>
+                    <li class="breadcrumb-item active">Đơn hàng mới tạo</li>
+
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Stt</th>
+                                <th>Số đơn hàng</th>
+                                <th>Tên khách hàng</th>
+                                <th>Ngày giao</th>
+                                <th>Địa chỉ</th>
+                                <th>Thành tiền</th>
+                                <th>Nhóm lệnh</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>15151515157 </td>
+                                <td>Mai Bá Vương </td>
+                                <td>16/02/1991 </td>
+                                <td>643/71 XVNT, P26, QBT, TPHCM </td>
+                                <td>468415</td>
+                                <td>
+                                    <button class="btn btn-danger">Hủy đơn</button>
+                                    <button class="btn btn-default">Chi tiết</button>
+                                    <button class="btn btn-success">Xác nhận đơn</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>84159632187</td>
+                                <td>Mai Lệ Huyền</td>
+                                <td>01/11/1992 </td>
+                                <td>Tokyo, Japan </td>
+                                <td>754896</td>
+                                <td>
+                                    <button class="btn btn-danger">Hủy đơn</button>
+                                    <button class="btn btn-default">Chi tiết</button>
+                                    <button class="btn btn-success">Xác nhận đơn</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>66619851158</td>
+                                <td>Võ Tuấn Vũ</td>
+                                <td>11/07/1994 </td>
+                                <td>643 Xô Viết Nghệ Tĩnh,p26, Q.Bình Thạnh, Tp.HCM </td>
+                                <td>110794</td>
+                                <td>
+                                    <button class="btn btn-danger">Hủy đơn</button>
+                                    <button class="btn btn-default">Chi tiết</button>
+                                    <button class="btn btn-success">Xác nhận đơn</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td>18581841848</td>
+                                <td>Nguyễn Võ Minh Trang</td>
+                                <td>30/11/2003 </td>
+                                <td>643 Xô Viết Nghệ Tĩnh,p26, Q.Bình Thạnh, Tp.HCM </td>
+                                <td>301103</td>
+                                <td>
+                                    <button class="btn btn-danger">Hủy đơn</button>
+                                    <button class="btn btn-default">Chi tiết</button>
+                                    <button class="btn btn-success">Xác nhận đơn</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td>51484716181</td>
+                                <td>Võ Thị Thu Thủy</td>
+                                <td>23/08/1962 </td>
+                                <td>643 Xô Viết Nghệ Tĩnh,p26, Q.Bình Thạnh, Tp.HCM</td>
+                                <td>444475</td>
+                                <td>
+                                    <button class="btn btn-danger">Hủy đơn</button>
+                                    <button class="btn btn-default">Chi tiết</button>
+                                    <button class="btn btn-success">Xác nhận đơn</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>06</td>
+                                <td>15475854962</td>
+                                <td>Đoàn Nguyễn Chơn Phong</td>
+                                <td>22/05/2003 </td>
+                                <td>Tây Sơn, Bình Định </td>
+                                <td>220503</td>
+                                <td>
+                                    <button class="btn btn-danger">Hủy đơn</button>
+                                    <button class="btn btn-default">Chi tiết</button>
+                                    <button class="btn btn-success">Xác nhận đơn</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>07</td>
+                                <td>151475496158</td>
+                                <td>Nguyễn Trường Thịnh</td>
+                                <td>18/04/2000 </td>
+                                <td>11 Ung Văn Khiêm,p25,QBT, Tp.HCM </td>
+                                <td>154185</td>
+                                <td>
+                                    <button class="btn btn-danger">Hủy đơn</button>
+                                    <button class="btn btn-default">Chi tiết</button>
+                                    <button class="btn btn-success">Xác nhận đơn</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>08</td>
+                                <td>615487219527</td>
+                                <td>Lê Trần Gia Huê</td>
+                                <td>28/02/2003 </td>
+                                <td>Quận 9, TPHCM </td>
+                                <td>157647</td>
+                                <td>
+                                    <button class="btn btn-danger">Hủy đơn</button>
+                                    <button class="btn btn-default">Chi tiết</button>
+                                    <button class="btn btn-success">Xác nhận đơn</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>09</td>
+                                <td>15476254851</td>
+                                <td>Vũ Ngọc Mến</td>
+                                <td>26/07/1997 </td>
+                                <td>Q1, TPHCM </td>
+                                <td>154814</td>
+                                <td>
+                                    <button class="btn btn-danger">Hủy đơn</button>
+                                    <button class="btn btn-default">Chi tiết</button>
+                                    <button class="btn btn-success">Xác nhận đơn</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>26548154876</td>
+                                <td>Kim Ngân</td>
+                                <td>1997 </td>
+                                <td>Q1, TPHCM</td>
+                                <td>481451</td>
+                                <td>
+                                    <button class="btn btn-danger">Hủy đơn</button>
+                                    <button class="btn btn-default">Chi tiết</button>
+                                    <button class="btn btn-success">Xác nhận đơn</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>15481851886</td>
+                                <td>Hahahahah</td>
+                                <td>11/11/2011 </td>
+                                <td>685 XVNT P26 QBT TPHCM </td>
+                                <td>1500000</td>
+                                <td>
+                                    <button class="btn btn-danger">Hủy đơn</button>
+                                    <button class="btn btn-default">Chi tiết</button>
+                                    <button class="btn btn-success">Xác nhận đơn</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>44444417995</td>
+                                <td>Huhuhu</td>
+                                <td>12/12/2012 </td>
+                                <td>Vườn Lài, Q12, Tp.HCM </td>
+                                <td>941547</td>
+                                <td>
+                                    <button class="btn btn-danger">Hủy đơn</button>
+                                    <button class="btn btn-default">Chi tiết</button>
+                                    <button class="btn btn-success">Xác nhận đơn</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

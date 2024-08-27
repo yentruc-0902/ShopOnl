@@ -1,0 +1,85 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Danh sách các bài viết</h1>
+            </div>
+            <div class="col-sm-6" style="text-align:right">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href='@Url.Action("Index","Thongtinchung")'>Home</a></li>
+                    <li class="breadcrumb-item active">Danh sách các bài viết</li>
+
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Mã bài viết</th>
+                                <th>Tên bài viết</th>
+                                <th>Ngày đăng</th>
+                                <th>Tài khoản</th>
+                                <th>Đã duyệt</th>
+                                <th>Số lần đọc</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>
+                                  Xu hướng giới trẻ 
+                                </td>
+                                <td>02:02 28/11/2022</td>
+                                <td> Trúc  </td>
+                                <td>true</td>
+                                <td>120</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>
+                                   Các sản phẩm nổi bật 
+                                </td>
+                                <td>12:00 02/02/2022</td>
+                                <td> Thiên Bảo </td>
+                                <td>true</td>
+                                <td>140</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>
+                                   Công nghệ phát triển như thế nào 
+                                </td>
+                                <td>15:00 05/02/2022</td>
+                                <td> Khánh Lâm </td>
+                                <td>true</td>
+                                <td>1</td>
+                            </tr>
+                           </tbody> 
+                            
+                              
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+
+
